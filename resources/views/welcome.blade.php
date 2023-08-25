@@ -7,5 +7,7 @@
 </head>
 <body>
     <h1>Welcome to my project</h1>
+    <h2>Please click <button> <a href=" {{url('/updateuser')"></a> </button> to Register on my website</h2>
+    
 </body>
 </html>
