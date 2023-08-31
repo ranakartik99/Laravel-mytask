@@ -68,8 +68,13 @@ a {
 </style>
 </head>
 <body>
+  <h2>This is login frm</h2>
+@if(Session::has('error'))
 
-<form method="POST" action="{{url('login')}}">
+{{Session::get('error')}}
+
+@endif
+<form action="{{url('loginpage')}}" method="POST">
     @csrf
   <div class="container">
     <h1>Login</h1>
@@ -79,8 +84,8 @@ a {
     <label for="email"><b>Email</b></label>
     <input type="text" placeholder="Enter Email" name="email" id="email" required>
 
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+    <label for="password"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="password" id="password" required>
 
 
 

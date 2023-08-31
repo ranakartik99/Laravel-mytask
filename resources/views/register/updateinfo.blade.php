@@ -9,12 +9,13 @@
 <body>
 
     @if(Session::has('success'))
-    {{Session::get('success')}}
-@endif
+             {{Session::get('success')}}
+    @endif
 
 
 @if($dd2)
-    <form method="POST" action="{{ route('updatesubmit', ['id' => $dd2->id]) }}">
+    
+    {{-- <form method="POST" action="{{ url('updatesubmit')$dd2->id}}"> --}}
         @csrf
       <div class="container">
        

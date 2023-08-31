@@ -54,17 +54,17 @@ class registerController extends Controller
         $student->name = $request->name;
         $student->email = $request->email;
         
-        // If you're updating the password too, you can use Hash::make
-        // $student->password = Hash::make($request->new_password);
+    //     // If you're updating the password too, you can use Hash::make
+    //     // $student->password = Hash::make($request->new_password);
 
         if ($student->save()) {
-            return redirect()->route('data1')->with('success', 'Student updated successfully.');
+            return back()->with('success', 'Student updated successfully.');
         } else {
             return back()->with('error', 'Error updating student.');
         }
     }
 
-    return back()->with('error', 'Student not found.');
+    // return back()->with('error', 'Student not found.');
 
         
 
